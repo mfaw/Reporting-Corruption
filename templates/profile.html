@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Chatbot{% endblock %}
+
+{% block content %}
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Welcome, {{ user.username }}</h1>
+        <div class="user-details">
+            <p>Email: {{ user.email }}</p>
+            <p>Mobile: {{ user.mobile }}</p>
+        </div>
+        <div class="reports-points">
+            <p>Total Reports: {{ report_count }}</p>
+            <p>Points: {{ user.points }}</p>
+        </div>
+        <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+    </div>
+</body>
+</html>
+{% endblock %}

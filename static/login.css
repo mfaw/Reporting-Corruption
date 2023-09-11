@@ -1,0 +1,77 @@
+
+
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: white; /* Text color for the login page */
+}
+
+.login-container {
+    max-width: 350px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #6E85A3, #CBC3E3); /* Use the same gradient as the navbar */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white; /* Text color for headings */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white; /* Text color for labels */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-login {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    background-color: #8A1538; /* Use the same color as the navbar */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #6E85A3; /* Change color on hover to match the navbar */
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+    color: white; /* Text color for paragraphs */
+}
+
+a {
+    text-decoration: none;
+    color: #8A1538; /* Super light blue color for links */
+}
+
+.signup:hover {
+    text-decoration: underline;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+}

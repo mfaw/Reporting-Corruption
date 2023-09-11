@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Map{% endblock %}
+
+{% block content %}
+<html>
+<head>
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Add this CSS to your HTML -->
+        <style>
+        .leaflet-popup-content-wrapper {
+            background-color: #8A1538; /* Purple background color */
+            color: white; /* Text color */
+            border-radius: 5px; /* Rounded corners */
+            padding: 20px; /* Increased padding inside the pop-up */
+            width: 250px; /* Adjust the width as needed */
+        }
+
+        .leaflet-popup-content-wrapper textarea {
+            width: 100%;
+            height: 100px; /* Adjust the height as needed */
+            padding: 10px;
+            border: 1px solid #6E85A3;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+
+        .leaflet-popup-content-wrapper button {
+            background-color: #6E85A3; /* Button background color */
+            color: white; /* Button text color */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .leaflet-popup-content-wrapper button:hover {
+            background-color: #301934; /* Button color on hover */
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="map" style="height: 600px;"></div>
+
+    <script>
+        var map = L.map('map').setView([25.3244392196375, 51.53339984299703], 13);
+        var marker;
+        var latlng;
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        map.on('click', function(event) {
+            latlng = event.latlng;
+
+            marker = L.marker(latlng).addTo(map);
+
+            marker.bindPopup('<textarea id="popup-input" placeholder="Write the corruption incident that happened in details with date and time."></textarea><br><button onclick="handlePopupSubmit(latlng)">Submit</button>').openPopup();
+        });
+
+        function handlePopupSubmit(latlng) {
+            var reportText = document.getElementById('popup-input').value;
+            // Send data to the server
+            fetch('/save_report', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ input: reportText, latlng: latlng }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                marker.closePopup();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+
+{% endblock %}

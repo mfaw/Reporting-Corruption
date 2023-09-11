@@ -1,0 +1,51 @@
+/* profile.css */
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #8A1538; /* Match the nav bar color */
+    margin-bottom: 20px;
+}
+
+.user-details {
+    margin-top: 20px;
+}
+
+.user-details p {
+    color: #333; /* Dark text color */
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.reports-points {
+    margin-top: 20px;
+}
+
+.reports-points p {
+    color: #333;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.btn-logout {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #8A1538; /* Match the nav bar color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.btn-logout:hover {
+    background-color: #6E85A3; /* Slightly darker on hover */
+}

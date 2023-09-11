@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+
+{% block title %}Testimonials{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stories.css') }}">
+    <title>Testimonials</title>
+</head>
+<body>
+    <header>
+        <h1>Heros Stories</h1>
+    </header>
+    <main>
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <p class="testimonial-text">
+                    "Reporting corruption not only helped me but also my community. I'm grateful for this platform."
+                </p>
+                <p class="testimonial-author">- John Doe</p>
+            </div>
+        </section>
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <p class="testimonial-text">
+                    "I was hesitant at first, but reporting corruption was the right thing to do. It made me feel empowered."
+                </p>
+                <p class="testimonial-author">- Jane Smith</p>
+            </div>
+        </section>
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <p class="testimonial-text">
+                    "Reporting corruption gave me a renewed sense of purpose. I'm now an advocate for transparency in our community."
+                </p>
+                <p class="testimonial-author">- Sarah Williams</p>
+            </div>
+        </section>
+
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                "I never thought reporting corruption would lead to positive change. Today, I'm proud of the impact I've made."
+            </p>
+            <p class="testimonial-author">- Michael Johnson</p>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                "Through reporting, I found courage and inspired others to stand up against corruption. Together, we're making a difference."
+            </p>
+            <p class="testimonial-author">- Emily Davis</p>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="testimonial-content">
+            <p class="testimonial-text">
+                "Reporting corruption helped me regain my faith in the system. It's a small step that can lead to significant change."
+            </p>
+            <p class="testimonial-author">- David Rodriguez</p>
+        </div>
+    </section>
+
+    </main>
+</body>
+</html>
+{% endblock %}
+{% block additional_content %}{% endblock %}

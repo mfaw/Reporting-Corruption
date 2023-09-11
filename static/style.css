@@ -1,0 +1,179 @@
+/* static/style.css */
+
+/* Navbar styles */
+*{
+  box-sizing: content-box;
+}
+body {
+  margin: 0;
+}
+.navbar {
+    background: linear-gradient(to right, #8A1538, #6E85A3); /* Use the same gradient */
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-logo:hover {
+    color: #6E85A3;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-menu a:hover {
+    color: #8A1538;
+}
+
+
+.footer {
+    background: linear-gradient(to right, #8A1538, #6E85A3);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-content {
+    background-color: rgba(255, 255, 255, 0.2); /* Super light blue with white gradient */
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left h3,
+.footer-right h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Super light blue with white gradient */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.heart-icon {
+    color: #8A1538; /* Purple color for the heart icon */
+}
+
+img{
+    width: 200px;
+    height: auto;
+}
+
+/* Add this CSS to your existing style.css */
+
+/* About Section Styles */
+.about-section {
+    background-color: #ddd5f3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #666;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Team Section Styles */
+.team-section {
+    background-color: #ddd5f3;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-section h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    border-radius: 40%;
+    max-width: 150px;
+    height: auto;
+}
+
+.team-member h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Additional Styles */
+.container {
+    padding: 20px;
+}
+
+/* Hover effect for team members */
+.team-member:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+

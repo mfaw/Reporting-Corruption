@@ -1,0 +1,54 @@
+/* style.css */
+
+/* Reset default margin and padding */
+/* Navbar styles */
+*{
+  box-sizing: content-box;
+}
+body {
+  margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #8A1538, #6E85A3);
+    color: white;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 45%; /* Adjust the width as needed */
+}
+
+.testimonial-text {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #8A1538; /* Purple color for the author's name */
+}
+
+
